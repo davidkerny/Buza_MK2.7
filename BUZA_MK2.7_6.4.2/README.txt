@@ -6,11 +6,9 @@ Known issues
 
 Positives
 ========================
-- 4. pokus: Funguje wifi s ESP
+- v6.4.2.4 Funguje wifi s ESP
 - Funguje Prusa Connect
 - pro 200 step motory.
-
-ostatni fw - >??
 
 
 
