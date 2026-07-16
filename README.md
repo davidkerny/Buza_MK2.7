@@ -21,7 +21,7 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 | **🟢 STABLE** | `6.4.2.4` | Recommended for daily use. |
 | **🟡 BETA** | `6.6.0` | **Needs active testing!** |
 
-> ⚠️ **Important:** During flashing, you can safely **ignore** the `"Firmware Verification Failed"` message.
+> During flashing, you can safely **ignore** the `"Firmware Verification Failed"` message.
 
 ### Upgrading from older Firmware (Pre-4.4):
 If your board is running firmware older than `4.4`, you must perform a step-by-step upgrade:
