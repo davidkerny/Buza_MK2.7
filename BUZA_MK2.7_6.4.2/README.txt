@@ -1,5 +1,4 @@
-6.4.2 fw tady - jsou dost zpomaleny rychlosti v ramci debuggingu Crash detection, nakonec byla crash detection vypnuta, tak by to slo zas zrychlit
-Zatim krom jedne vytistene kostky netestovano.
+6.4.2 fw tady - jsou dost zpomaleny rychlosti v ramci debuggingu Crash detection, nakonec byla crash detection vypnuta, tak by to slo zas zrychlit.
 
 Known issues
 ========================
@@ -7,16 +6,15 @@ Known issues
 
 Positives
 ========================
-- Funguje wifi s ESP
+- 4. pokus: Funguje wifi s ESP
 - Funguje Prusa Connect
-
-firmware_MK2.7_6.4.2_fixed_esp.bbf - je pro 200 step motory.
+- pro 200 step motory.
 
 ostatni fw - >??
 
 
+
 Input Shaper Settings
-=======================
 X-axis Filter    MZV
 X-axis Freq.     50
 Y-axis Filter    MZV
@@ -24,7 +22,6 @@ Y-axis Freq.     39
 
 
 Build Log
-=======================
 -- Project version: 6.4.2
 -- Project version with full suffix: 6.4.2+0.LOCAL
 -- Project version with short suffix: 6.4.2+0
@@ -141,3 +138,4 @@ Build Log
 -- Configured to generate .bbf version of the firmware.
 -- Signing Key:
 -- Configuring done (7.5s)
+firmware_MK2.7_6.4.2_fixed_esp.bbf - je pro 200 step motory.
