@@ -1,14 +1,15 @@
 
-FIRMWARE VERSION 6.4.2
+FIRMWARE VERSION 6.4.2.4
+
+SETUP:
 
 - Turn off the Crash Detection.
 - Turn off the printer model check, firmware version check etc.
-- Configure Input Shaper values in the menu: (X-Axis: MZV type at 60 HzY-Axis: MZV type at 48 HzDamping Ratio: 0.1  ??? - NEEDS TESTING)
+- Configure Input Shaper values in the menu: (X:MZV 50Hz, 7:MZV 39Hz..  OR X-Axis: MZV 60 Hz, Y-Axis: MZV 48 Hz, Damping Ratio: 0.1  ??? - NEEDS further testing)
 - config for 200step motors only!
 
 
-MRS machine specifics: 
-- ESP WiFi doesnt work for some reason ?!?
+TODO on MRS machine: 
 - X-axis selftest doesnt pass (axis too long?)
 
 __
