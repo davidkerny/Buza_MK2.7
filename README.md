@@ -22,10 +22,12 @@ Slicer Preset:
 
 __________________________________________________
 HARDWARE:
-MK3 printer with MINI control board + LCD.
-Eventually built on MK2 frame with 24V PSU and bed.
+MK3 or MK2 printer with MINI control board + LCD.
+
+with 24V PSU and MK52 bed.
 
 Required hardware mods:
+
 - Reverse the Filament sensor logic (preferrably by bypassing the transistor on the IR sensor PCB)
 - Change the IR sensor connector with different pinout
 - Reverse the X, Y and Z motors movement (In case of X, can be done by physically moving the motor to the front of the X-end part)
@@ -33,8 +35,10 @@ Required hardware mods:
 - In case of NOCTUA fan, it spins too slow. Hard wire the fan to 5V (bypassing the PWM) to efficiently cool the extruder heatsink
 - Heatbed: change the heatbed connector to be able to connect it. Replace the heatbed fuse to 10-15A.
 - Remove the appendix on the Buddy board to flash unsigned firmware
-  
+- Some mods are required solely for reverse-compatibility.
+
 Printable parts:
+
 https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x
 https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s
 _________________________________________________________________________________
