@@ -28,7 +28,7 @@ Required hardware mods:
 - Change the IR sensor connector with different pinout
 - Reverse the X, Y and Z motors movement (In case of X, can be done by physically moving the motor to the front of the X-end part)
 - Make a Z motor splitter in order to connect the two Z motors in parallel.
-- In case of NOCTUA fan, hard wire the fan to 5V (bypassing the PWM) to efficiently cool the extruder heatsink
+- In case of NOCTUA fan, it spins too slow. Hard wire the fan to 5V (bypassing the PWM) to efficiently cool the extruder heatsink
 - Heatbed: change the heatbed connector to be able to connect it. Replace the heatbed fuse to 10-15A.
 - Remove the appendix on the Buddy board to flash unsigned firmware
   
