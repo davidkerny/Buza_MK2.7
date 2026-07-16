@@ -2,8 +2,9 @@
 FIRMWARE VERSION 6.4.2
 
 - Turn off the Crash Detection.
+- Turn off the printer model check, firmware version check etc.
 - Configure Input Shaper values in the menu: (X-Axis: MZV type at 60 HzY-Axis: MZV type at 48 HzDamping Ratio: 0.1  ??? - NEEDS TESTING)
-- for 200step motors only
+- config for 200step motors only!
 
 
 MRS machine specifics: 
