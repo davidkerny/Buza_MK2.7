@@ -14,6 +14,19 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 
 ---
 
+## ⚙️ Slicer Presets Details
+
+* **Profiles:** Standard **MK3.5 profiles** work out of the box, but the printer eats the MK4 and MINI Gcodes too.
+* **Homing & Levelling:** Utilizes `G28` for **Mesh Bed Leveling** (MK3S uses G80)
+* **Config Bundle:** Import the settings via `File > Import > Import Config Bundle`.
+
+---
+
+## 📝 Known Issues & TODO (MRS Machine)
+* [ ] **X-axis self-test failing:** Currently does not pass the self-test (complains about
+
+---
+
 ## 💾 Firmware Status
 
 | Status | Version | Notes |
@@ -80,16 +93,3 @@ Get the printed parts designed specifically for these builds:
 
 * [Buza MK2.7 Upgrade for MK2.x](https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x) (on Printables)
 * [Buza MK3b Upgrade for MK3S](https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s) (on Printables)
-
----
-
-## ⚙️ Slicer Presets Details
-
-* **Profiles:** Standard **MK3.5 profiles** work out of the box, but the printer eats the MK4 and MINI Gcodes too.
-* **Homing & Levelling:** Utilizes `G28` for **Mesh Bed Leveling** (MK3S uses G80)
-* **Config Bundle:** Import the settings via `File > Import > Import Config Bundle`.
-
----
-
-## 📝 Known Issues & TODO (MRS Machine)
-* [ ] **X-axis self-test failing:** Currently does not pass the self-test (complains about
