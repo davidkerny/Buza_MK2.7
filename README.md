@@ -22,9 +22,7 @@ Slicer Preset:
 
 __________________________________________________
 HARDWARE:
-MK3 or MK2 printer with MINI control board + LCD.
-
-with 24V PSU and MK52 bed.
+MK3 or MK2 printer with MINI control board + LCD. 24V PSU and MK52 bed.
 
 Required hardware mods:
 
