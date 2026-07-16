@@ -20,8 +20,9 @@ Slicer Preset:
 
 __________________________________________________
 HARDWARE:
-MK3 printer with MINI control board + LCD
-Eventually built on MK2 frame with 24V PSU and bed
+MK3 printer with MINI control board + LCD.
+Eventually built on MK2 frame with 24V PSU and bed.
+
 Required hardware mods:
 - Reverse the Filament sensor logic (preferrably by bypassing the transistor on the IR sensor PCB)
 - Change the IR sensor connector with different pinout
@@ -37,6 +38,7 @@ https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s
 _________________________________________________________________________________
 FW UPDATING: 
 Ignore the Firmware Verification Failed message
+
 UPDATING FW PRE-4.4:
 First, update to version 4.4 which includes the new bootloader:
 https://help.prusa3d.com/downloads/mini-2?versions=all
