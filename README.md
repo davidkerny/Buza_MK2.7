@@ -1,57 +1,95 @@
-HOW TO START PRINTING WITH THE MK2.7: 
-- Download the latest PrusaSlicer Config Bundle .ini file.
-- in PrusaSlicer, hit File>Import>Import Config Bundle
+# Buza MK2.7 Upgrade
+
+An upgrade project enabling you to run Prusa MINI's Buddy board control electronics on older MK2/MK3 frames.
+
+---
+
+## 🚀 Quick Start: How to Start Printing
+
+1. **Download** the latest [PrusaSlicer Config Bundle (.ini)].
+2. In PrusaSlicer, navigate to:
+   > **File** > **Import** > **Import Config Bundle**
+3. Select the downloaded `.ini` file and confirm.
+4. Slice and Print some fancy stuff.
+
+---
+
+## 💾 Firmware Status
+
+| Status | Version | Notes |
+| :--- | :--- | :--- |
+| **🟢 STABLE** | `6.4.2.4` | Recommended for daily use. |
+| **🟡 BETA** | `6.6.0` | **Needs active testing!** |
+
+> ⚠️ **Important:** During flashing, you can safely **ignore** the `"Firmware Verification Failed"` message.
+
+### Upgrading from older Firmware (Pre-4.4):
+If your board is running firmware older than `4.4`, you must perform a step-by-step upgrade:
+1. First, flash **version 4.4** to update the bootloader: [Prusa MINI Firmware Downloads](https://help.prusa3d.com/downloads/mini-2?versions=all).
+2. Only after a successful update to `4.4` can you flash the newer firmware versions (6.x+).
+
+---
+
+## 🔧 Printer Setup & Configuration
+
+Once flashed, ensure the following settings are configured in the printer menu:
+
+* **Disable Protections:**
+    * Turn **OFF** Crash Detection.
+    * Turn **OFF** the printer model check, firmware version check, etc.
+* **Motors:**
+    * This configuration is strictly for **200-step motors** (1.8° step angle) only!
+* **Input Shaper Tuning** *(Under Active Testing)*:
+    * *Option A:* **X-Axis:** `MZV 50Hz` | **Y-Axis:** `MZV 39Hz`
+    * *Option B:* **X-Axis:** `MZV 60Hz` | **Y-Axis:** `MZV 48Hz` (Damping Ratio: `0.1`)
+    * *Note: Input Shaper values still need further verification.*
+
+---
+
+## 🔌 Hardware Requirements & Modifications
+
+### Core Requirements:
+* **Frame/Bed:** Prusa MK3 or MK2 printer frame with a **24V PSU** and **MK52 heated bed**.
+* **Electronics:** Prusa **MINI Buddy control board** + **MINI LCD**.
+
+### Required Hardware Mods to Build a New MK2.7:
+
+[ Buddy Board ] ──> Remove Appendix (Allow Unsigned FW)
+│
+├──> [ Filament Sensor ] ──> Reverse Logic (Bypass IR PCB Transistor) & Change Pinout
+├──> [ X, Y, Z Motors ]  ──> Reverse Direction (X can be flipped physically to the front)
+├──> [ Z Motors ]        ──> Parallel Splitter Cable (Connect both Z-motors to 1 port)
+├──> [ Noctua Fan ]      ──> Hardwire to 5V (Bypassing PWM for adequate cooling)
+└──> [ Heatbed ]         ──> Swap connector & upgrade fuse to 10-15A
 
 
-__________________
+* **Buddy Board:** Physical removal of the appendix/breakaway tab on the Buddy board is required to flash unsigned/custom firmware.
+* **Filament Sensor:** Reverse the IR sensor logic (preferable by bypassing the transistor on the sensor PCB) and modify the connector pinout.
+* **Motors Direction:** Reverse X, Y, and Z stepper directions.
+    * *Tip:* For the X-axis, this can be alternatively solved by physically mounting the motor to the front of the X-end part.
+* **Z-Axis:** A custom parallel splitter cable is required to connect both Z-axis stepper motors to the single Z-port on the Buddy board.
+* **Hotend Fan (Noctua):** The standard Noctua fan spins too slowly under PWM control on this board. **Hardwire the fan directly to 5V** (bypassing PWM) to ensure sufficient extruder heatsink cooling.
+* **Heatbed:** Modify the heatbed connector for Buddy board compatibility. **Replace the heatbed fuse with a 10-15A rated fuse.**
+* *Note: Some modifications are required solely for firmware reverse-compatibility with the existing MK2.7 printers.*
 
-FIRMWARE 6.6.0 needs testing
+---
 
-STABLE FIRMWARE VERSION 6.4.2.4
+## 📐 Printable Parts
 
-SETUP:
+Get the printed parts designed specifically for these builds:
 
-- Turn off the Crash Detection.
-- Turn off the printer model check, firmware version check etc.
-- Configure Input Shaper values in the menu: (X:MZV 50Hz, 7:MZV 39Hz..  OR X-Axis: MZV 60 Hz, Y-Axis: MZV 48 Hz, Damping Ratio: 0.1  ??? - NEEDS further testing)
-- config for 200step motors only!
+* [Buza MK2.7 Upgrade for MK2.x](https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x) (on Printables)
+* [Buza MK3b Upgrade for MK3S](https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s) (on Printables)
 
+---
 
-TODO on MRS machine: 
-- X-axis selftest doesnt pass (axis too long?)
+## ⚙️ Slicer Presets Details
 
-__
+* **Profiles:** Standard **MK3.5 profiles** work out of the box, but the printer eats the MK4 and MINI Gcodes too.
+* **Homing & Levelling:** Utilizes `G28` for **Mesh Bed Leveling** (MK3S uses G80)
+* **Config Bundle:** Import the settings via `File > Import > Import Config Bundle`.
 
-Slicer Preset: 
-- Import the PrusaSlicer config bundle (File>Import>Import Config Bundle)
-- MK3.5 profiles work
-- G28 Mesh Bed Levelling
+---
 
-
-__________________________________________________
-HARDWARE:
-MK3 or MK2 printer with MINI control board + LCD. 24V PSU and MK52 bed.
-
-Required hardware mods:
-
-- Reverse the Filament sensor logic (preferrably by bypassing the transistor on the IR sensor PCB)
-- Change the IR sensor connector with different pinout
-- Reverse the X, Y and Z motors movement (In case of X, can be done by physically moving the motor to the front of the X-end part)
-- Make a Z motor splitter in order to connect the two Z motors in parallel.
-- In case of NOCTUA fan, it spins too slow. Hard wire the fan to 5V (bypassing the PWM) to efficiently cool the extruder heatsink
-- Heatbed: change the heatbed connector to be able to connect it. Replace the heatbed fuse to 10-15A.
-- Remove the appendix on the Buddy board to flash unsigned firmware
-- Some mods are required solely for reverse-compatibility.
-
-Printable parts:
-
-https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x
-https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s
-_________________________________________________________________________________
-FW UPDATING: 
-Ignore the Firmware Verification Failed message
-
-UPDATING FW PRE-4.4:
-First, update to version 4.4 which includes the new bootloader:
-https://help.prusa3d.com/downloads/mini-2?versions=all
-Only then, flash a newer version.
+## 📝 Known Issues & TODO (MRS Machine)
+* [ ] **X-axis self-test failing:** Currently does not pass the self-test (complains about
