@@ -30,6 +30,7 @@ Required hardware mods:
 - In case of NOCTUA fan, hard wire the fan to 5V (bypassing the PWM) to efficiently cool the extruder heatsink
 - Heatbed: change the heatbed connector to be able to connect it. Replace the heatbed fuse to 10-15A.
 - Remove the appendix on the Buddy board to flash unsigned firmware
+  
 Printable parts:
 https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x
 https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s
