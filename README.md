@@ -1,5 +1,13 @@
+HOW TO START PRINTING WITH THE MK2.7: 
+- Download the latest PrusaSlicer Config Bundle .ini file.
+- in PrusaSlicer, hit File>Import>Import Config Bundle
 
-FIRMWARE VERSION 6.4.2.4
+
+__________________
+
+FIRMWARE 6.6.0 needs testing
+
+STABLE FIRMWARE VERSION 6.4.2.4
 
 SETUP:
 
