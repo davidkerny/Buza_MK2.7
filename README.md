@@ -78,6 +78,6 @@ Get the printed parts designed specifically for these builds:
 
 ### Upgrading from older Firmware (Pre-4.4):
 If your board is running firmware older than `4.4`, you must perform a step-by-step upgrade in order to upgrade the ancient bootloader:
-1. First, flash **version 4.4** to update the bootloader: [Prusa MINI Firmware Downloads](https://help.prusa3d.com/downloads/mini-2?versions=all).
+1. First, flash **version 4.4** (with bootloader 2.0): [Prusa MINI Firmware Downloads](https://help.prusa3d.com/downloads/mini-2?versions=all).
 2. Only after a successful update to `4.4` can you flash the newer firmware versions (6.x+).
 
