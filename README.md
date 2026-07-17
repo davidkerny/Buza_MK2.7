@@ -22,11 +22,6 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 
 ---
 
-## 📝 Known Issues & TODO (MRS Machine)
-* [ ] **X-axis self-test failing:** Currently does not pass the self-test (complains about
-
----
-
 ## 💾 Firmware Status
 
 | Status | Version | Notes |
