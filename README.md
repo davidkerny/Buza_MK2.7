@@ -22,22 +22,6 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 
 ---
 
-## 💾 Firmware Status
-
-| Status | Version | Notes |
-| :--- | :--- | :--- |
-| **🟢 STABLE** | `6.4.2.4` | Recommended for daily use. |
-| **🟡 BETA** | `6.6.0` | **Needs active testing!** |
-
-> During flashing, you can safely **ignore** the `"Firmware Verification Failed"` message.
-
-### Upgrading from older Firmware (Pre-4.4):
-If your board is running firmware older than `4.4`, you must perform a step-by-step upgrade:
-1. First, flash **version 4.4** to update the bootloader: [Prusa MINI Firmware Downloads](https://help.prusa3d.com/downloads/mini-2?versions=all).
-2. Only after a successful update to `4.4` can you flash the newer firmware versions (6.x+).
-
----
-
 ## 🔧 Printer Setup & Configuration
 
 Once flashed, ensure the following settings are configured in the printer menu:
@@ -88,3 +72,12 @@ Get the printed parts designed specifically for these builds:
 
 * [Buza MK2.7 Upgrade for MK2.x](https://www.printables.com/model/65788-buza-mk27-upgrade-for-mk2x) (on Printables)
 * [Buza MK3b Upgrade for MK3S](https://www.printables.com/model/65785-buza-mk3b-upgrade-for-mk3s) (on Printables)
+
+
+---
+
+### Upgrading from older Firmware (Pre-4.4):
+If your board is running firmware older than `4.4`, you must perform a step-by-step upgrade in order to upgrade the ancient bootloader:
+1. First, flash **version 4.4** to update the bootloader: [Prusa MINI Firmware Downloads](https://help.prusa3d.com/downloads/mini-2?versions=all).
+2. Only after a successful update to `4.4` can you flash the newer firmware versions (6.x+).
+
