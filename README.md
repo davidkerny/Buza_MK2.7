@@ -16,9 +16,9 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 
 ## ⚙️ Slicer Presets Details
 
-* **Profiles:** Standard **MK3.5 profiles** work out of the box, but the printer eats the MK4 and MINI Gcodes too.
+* **PrusaSlicer profiles and settings:** Download and import the Config Bundle via `File > Import > Import Config Bundle`.
+* **Profiles:** Standard **MK3.5 profiles** also work out of the box. The printer eats the MK4 and MINI Gcodes too.
 * **Homing & Levelling:** Utilizes `G28` for **Mesh Bed Leveling** (MK3S uses G80)
-* **Config Bundle:** Import the settings via `File > Import > Import Config Bundle`.
 
 ---
 
@@ -26,15 +26,15 @@ An upgrade project enabling you to run Prusa MINI's Buddy board control electron
 
 Once flashed, ensure the following settings are configured in the printer menu:
 
-* **Disable Protections:**
+* **Recommended: Disable Protections:**
     * Turn **OFF** Crash Detection.
-    * Turn **OFF** the printer model check, firmware version check, etc.
+    * Turn **OFF** the G-code checks. (Settings>Hardware>G-Code Checks)
 * **Motors:**
-    * This configuration is strictly for **200-step motors** (1.8° step angle) only!
+    * FW 6.6.0.3 includes versions for **200-step (default) as well as 400-step motors**
 * **Input Shaper Tuning** *(Under Active Testing)*:
-    * *Option A:* **X-Axis:** `MZV 50Hz` | **Y-Axis:** `MZV 39Hz`
-    * *Option B:* **X-Axis:** `MZV 60Hz` | **Y-Axis:** `MZV 48Hz` (Damping Ratio: `0.1`)
-    * *Note: Input Shaper values still need further verification.*
+    * *Option A:* **X-Axis:** `MZV 50Hz` | **Y-Axis:** `MZV 39Hz` (Works on AER Machines)
+    * *Option B:* **X-Axis:** `MZV 60Hz` | **Y-Axis:** `MZV 48Hz` (Damping Ratio: `0.1`, AI suggestion for MK3.5 ???)
+    * *Note: Input Shaper values might still need further verification.*
 
 ---
 
