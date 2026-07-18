@@ -90,5 +90,5 @@ FW:
 python build.py --preset mini --build-type release --version-suffix .x
 
 PNG2CC:
-python png2cc.py --folder ..\src\gui\res\cc ..\src\gui\res\png\
+python png2cc.py --folder ..\src\gui\res\converted_pngs ..\src\gui\res\png\
 
